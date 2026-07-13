@@ -148,6 +148,39 @@ h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800;color:var(--ink);letter-
 .svc-items li{font-size:.9rem;color:var(--ink-soft);padding-left:1.2rem;position:relative;}
 .svc-items li::before{content:'';position:absolute;left:0;top:.5rem;width:6px;height:6px;border-radius:50%;background:var(--blue);}
 
+/* ═══ PROJECTS ═══════════════════════════════════════════ */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+.proj-card{
+  background:#fff;border:1px solid var(--border);border-radius:16px;
+  padding:2rem;display:flex;flex-direction:column;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.proj-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 16px 36px rgba(41,82,227,.1);}
+.proj-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.3rem;}
+.proj-icon{
+  width:46px;height:46px;border-radius:11px;background:var(--blue-lt);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+}
+.proj-num{font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--muted);}
+.proj-title{font-size:1.2rem;font-weight:800;color:var(--ink);margin-bottom:.3rem;}
+.proj-tag{font-size:.76rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:1rem;}
+.proj-desc{font-size:.88rem;color:var(--ink-soft);line-height:1.65;margin-bottom:1.3rem;flex-grow:1;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem;}
+.proj-stack span{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;color:var(--ink-soft);
+  background:var(--bg-soft);border:1px solid var(--border);padding:.3rem .7rem;border-radius:6px;
+}
+.proj-link{
+  font-size:.86rem;font-weight:700;color:var(--blue);text-decoration:none;
+  border-bottom:2px solid var(--blue-lt);padding-bottom:.15rem;width:fit-content;
+  transition:border-color .2s;
+}
+.proj-link:hover{border-color:var(--blue);}
+
+@media(max-width:900px){
+  .proj-grid{grid-template-columns:1fr;}
+}
+
 /* ═══ WHY WORK WITH ME ══════════════════════════════════ */
 #why{background:var(--bg-soft);}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
